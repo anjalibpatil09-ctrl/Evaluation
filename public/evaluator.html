@@ -1,0 +1,54 @@
+<script>
+if(localStorage.getItem("role") !== "evaluator"){
+  window.location = "participant.html";
+}
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Evaluator Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="navbar">
+  <h2>Evaluator Dashboard</h2>
+  <button onclick="logout()" class="logout-btn">Logout</button>
+</div>
+
+<div class="content">
+
+  <div class="card">
+  <h3>Submit Evaluation</h3>
+
+  <label>Select Participant</label>
+  <select id="participantSelect"></select>
+  <div id="participantInfo" style="
+  margin:10px 0;
+  padding:10px;
+  background:#eef2ff;
+  border-radius:8px;
+  font-weight:500;
+"></div>
+
+
+  <div class="hint" id="participantInfo"></div>
+
+  <label>Round Number</label>
+  <input id="round">
+
+  <label>Score</label>
+  <input id="score">
+
+  <label>Feedback</label>
+  <textarea id="feedback"></textarea>
+
+  <button onclick="submitEvaluation()">Submit</button>
+</div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

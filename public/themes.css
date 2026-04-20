@@ -1,0 +1,23 @@
+:root {
+  --bg: #0f172a;
+  --card: rgba(255,255,255,0.08);
+  --text: white;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.4s;
+}
+
+.light-theme {
+  --bg: #f1f5f9;
+  --card: white;
+  --text: #1e293b;
+}
+
+.blue-theme {
+  --bg: linear-gradient(135deg,#1e3a8a,#0ea5e9);
+  --card: rgba(255,255,255,0.2);
+  --text: white;
+}

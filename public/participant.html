@@ -1,0 +1,50 @@
+<script>
+if(localStorage.getItem("role") !== "participant"){
+  window.location = "index.html";
+}
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Participant Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="navbar">
+  <h2>My Dashboard</h2>
+  <button onclick="logout()" class="logout-btn">Logout</button>
+</div>
+
+<div class="content">
+
+  <div class="card">
+    <h3>My Info</h3>
+    <p id="myTech"></p>
+    <p id="myBatch"></p>
+  </div>
+
+  <div class="card">
+    <h3>My Scores</h3>
+    <table border="1" width="100%" id="scoreTable">
+      <thead>
+        <tr>
+          <th>Round</th>
+          <th>Score</th>
+          <th>Feedback</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+
+<script>
+loadMyScores();
+</script>
+
+</body>
+</html>

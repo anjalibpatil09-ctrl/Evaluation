@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mock Evaluation System</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="login-page">
+
+<div class="login-left">
+  <h1>Mock Evaluation System</h1>
+  <p>Manage mock interviews and evaluations.</p>
+
+  <div class="admin-card">
+    <h3>Admin Access</h3>
+    <p>Email: admin@mock.com</p>
+    <p>Password: admin123</p>
+  </div>
+</div>
+
+<div class="login-right">
+
+<div class="login-card">
+
+  <!-- LOGIN BOX -->
+  <div id="loginBox">
+    <h2>Login</h2>
+    <input id="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p class="switch" onclick="showRegister()">Create Account</p>
+  </div>
+
+  <!-- REGISTER BOX -->
+  <div id="registerBox" style="display:none;">
+    <h2>Create Account</h2>
+    <input id="regName" placeholder="Full Name">
+    <input id="regEmail" placeholder="Email">
+    <input id="regPassword" type="password" placeholder="Password">
+
+    <select id="regRole">
+      <option value="evaluator">Evaluator</option>
+      
+    </select>
+
+    <button onclick="register()">Register</button>
+    <p class="switch" onclick="showLogin()">Back to Login</p>
+  </div>
+
+</div>
+</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

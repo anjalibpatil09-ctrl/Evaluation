@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="sidebar">
+<h2>Mock System</h2>
+<a onclick="showSection('home')">Dashboard</a>
+<a onclick="showSection('participants')">Participants</a>
+<a onclick="showSection('analytics')">Analytics</a>
+<a onclick="logout()">Logout</a>
+</div>
+
+<div class="main">
+
+<div id="home">
+<div class="stats">
+  <div class="stat-box">
+    <h3 id="totalParticipants">0</h3>
+    Participants
+  </div>
+  <div class="stat-box">
+    <h3 id="totalEvaluations">0</h3>
+    Evaluations
+  </div>
+</div>
+</div>
+
+<div id="participants" style="display:none;">
+<div class="card">
+<h3>Participants List</h3>
+<table id="participantsTable">
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+</div>
+
+<div id="analytics" style="display:none;">
+<div class="card">
+<h3>Evaluation Analytics</h3>
+<canvas id="chart"></canvas>
+</div>
+</div>
+
+</div>
+
+<div class="toast" id="toast">Success</div>
+
+<script src="app.js"></script>
+</body>
+</html>
